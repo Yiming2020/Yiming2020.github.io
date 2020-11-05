@@ -31,7 +31,7 @@ ny_noaa_df =
   ) %>% 
   separate(month, into = c("year", "month", "day")) %>% 
   mutate( month = as.numeric(month)) %>% 
-  subset(select = c(id, date, month, prcp, snow, tmin, tmax))
+  subset(select = c(id, date,year, month, prcp, snow, tmin, tmax))
 ```
 Column {data-width=650}
 -----------------------------------------------------------------------
@@ -71,9 +71,17 @@ ny_noaa_df %>%
   layout(xaxis = x )
 ```
 
-### Chart C
+### Here is a boxplot of snowfall across over years
 
 ```{r}
+ny_noaa_df %>% 
+  mutate(
+    year = as.factor(year)
+  ) %>% 
+  filter(snow == (1:99)) %>% 
+   plot_ly(y = ~ snow, x = ~ year, color = ~ year,
+          type = "box", colors = "viridis") %>% 
+  layout(yaxis = x )
 
 ```
 
