@@ -1,0 +1,14 @@
+---
+title: "About me"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+
+---
+
+# This page has information about me
+
+I am interested in Chinese Acupuncture and Traditional Chinese Medicine. 
+I hope one day I could use what I learn from biostatis to apply to quantify Chinese Acupuncture and Traditional Chinese Medicine. 
+ 

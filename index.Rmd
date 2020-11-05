@@ -1,0 +1,48 @@
+---
+title: "My awesome website"
+output: 
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_float: true
+---
+
+# This is Yiming's website  
+
+ &nbsp; &nbsp; &nbsp; &nbsp; <font size = "5" color = "blue"> I'm Yiming Zhao. Welcome to my website! I am a first year Biostatistic master student in TM track. I come from Beijing, China.  My hobbies are baking, traveling and reading. My favourite quote is : " Numen Lumen." Oh, I forgot to say, I have a British Shorthair cat. His name is cat. hahaha   
+ &nbsp; &nbsp; &nbsp; &nbsp; As a freshman mailman student, I would be very happy to introduce myself from both my education experience and my life. Are you ready to take a close look at my life ?!</font>  
+
+![](https://media.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy.gif)    
+<p>&nbsp;</p>
+## My Photo  
+
+
+ <img src = "image/WechatIMG40.jpg" style = "width:75%">   
+   
+## My cat  
+
+ <img src = "image/cat.jpeg" style = "width:75%">   
+   
+ 
+
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+## Education and Professional Experience
+
+[Education](education.html)  
+
+
+## Quarterly Results {.tabset}
+
+### By Product  
+
+This is my first tab and I can do stuff
+
+
+### By Region  
+
+This is my second tab and it does other stuff
+
+
+
+ 
