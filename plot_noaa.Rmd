@@ -4,6 +4,7 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
+    source: embed
 ---
 
 ```{r setup, include=FALSE}
@@ -21,32 +22,53 @@ data("ny_noaa")
 ny_noaa_df = 
   ny_noaa %>% 
   mutate(
+    month = date,
     tmax = as.numeric(tmax),
     tmin = as.numeric(tmin),
     prcp = prcp / 10,
     tmax = tmax / 10,
     tmin = tmin / 10
-  ) 
+  ) %>% 
+  separate(month, into = c("year", "month", "day")) %>% 
+  mutate( month = as.numeric(month)) %>% 
+  subset(select = c(id, date, month, prcp, snow, tmin, tmax))
 ```
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Scatter
+### Here is a scatter plot for tmax of the USC00300961 station across over date
 
 ```{r}
+a <- as.Date("2001-09-01")
+b <- as.Date("2010-12-31")
+
 ny_noaa_df %>%
-  filter(id == c("USC00300766", "USC00300183", "USC00300961")) %>% 
-  mutate(text_label = str_c("Precipiitation(mm):", prcp, " Snowfall(mm):", snow)) %>% 
-  plot_ly(x = ~ date, y = ~ tmax, color = ~ id, text = ~ text_label, alpha = .5, type = "scatter", mode = "markers", colors = "viridis")
+  mutate(text_label = str_c("Precipiitation(mm):", prcp, ", Snowfall(mm):", snow)) %>% 
+  filter(id == "USC00300961") %>% 
+  plot_ly(x = ~ date, y = ~ tmax, color = ~ month, text = ~ text_label, alpha = .5,
+          type = "scatter", mode = "markers", colors = "viridis") %>% 
+  layout(xaxis = list(range = c(a, b)))
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Here is a bar chart of snowfall value count for the USC00300961 station during study period
+
 
 ```{r}
-
+x <- list(
+  title = "Snowfall (mm）")
+  
+ny_noaa_df %>% 
+  drop_na(snow) %>%
+  filter(snow > 0) %>% 
+  mutate(snow = as.character(snow)) %>% 
+  count(snow) %>% 
+  mutate(snow = fct_reorder(snow, n)) %>% 
+  plot_ly(x = ~ snow, y = ~ n,
+          color = ~ snow, type = "bar", colors = "viridis") %>% 
+  layout(xaxis = x )
 ```
 
 ### Chart C
