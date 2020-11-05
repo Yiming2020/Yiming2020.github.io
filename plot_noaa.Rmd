@@ -1,0 +1,57 @@
+---
+title: "Problem2 NOAA data"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(p8105.datasets)
+library(tidyverse)
+library(plotly)
+
+
+```
+
+```{r}
+data("ny_noaa")
+
+ny_noaa_df = 
+  ny_noaa %>% 
+  mutate(
+    tmax = as.numeric(tmax),
+    tmin = as.numeric(tmin),
+    prcp = prcp / 10,
+    tmax = tmax / 10,
+    tmin = tmin / 10
+  ) 
+```
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Scatter
+
+```{r}
+ny_noaa_df %>%
+  filter(id == c("USC00300766", "USC00300183", "USC00300961")) %>% 
+  mutate(text_label = str_c("Precipiitation(mm):", prcp, " Snowfall(mm):", snow)) %>% 
+  plot_ly(x = ~ date, y = ~ tmax, color = ~ id, text = ~ text_label, alpha = .5, type = "scatter", mode = "markers", colors = "viridis")
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+

@@ -7,6 +7,8 @@ navbar:
       href: about.html
     - icon: fa-envelope fa-lg
       href: mailto:<crystalzhao1025@gmail.com>
+    - text: "Dashboard"
+      href: plot_noaa.html
     - icon: fa-github fa-lg
       href: http://github.com/Yiming2020/
     - icon: fab fa-facebook
