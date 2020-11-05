@@ -19,4 +19,6 @@ Certificate：Education and Educational Services.
 Prof. Merrin’s Lab in University of Wisconsin-Madison &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;03/2019-05/2020  
 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;Studying the roles and mechanisms of cell cycle regulators in metabolism and insulin secretion.  
 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;Taking in charge of designing algorithm for signal identification and analyzed research data with
-MATLAB.
+MATLAB.  
+
+[Resume](file:///Users/yiming/Desktop/resume/cv_yiming.html)
