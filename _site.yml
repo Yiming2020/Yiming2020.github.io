@@ -9,6 +9,8 @@ navbar:
       href: mailto:<crystalzhao1025@gmail.com>
     - icon: fa-github fa-lg
       href: http://github.com/Yiming2020/
+    - icon: fab fa-facebook
+      href: https://www.facebook.com/yiming.zhao.925
 output:
   html_document:
     theme: flatly

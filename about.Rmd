@@ -9,6 +9,6 @@ output:
 
 # This page has information about me
 
-I am interested in Chinese Acupuncture and Traditional Chinese Medicine. 
-I hope one day I could use what I learn from biostatis to apply to quantify Chinese Acupuncture and Traditional Chinese Medicine. 
+<font size = "5"> I am interested in Chinese Acupuncture and Traditional Chinese Medicine. 
+I hope one day I could use what I learn from biostatistics to apply to quantify Chinese Acupuncture and Traditional Chinese Medicine. Anyone who also interests in these academic areas is welcoming to contact me. My contact information is on the head of my website.</font>
  
