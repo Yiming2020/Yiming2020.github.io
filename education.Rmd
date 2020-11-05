@@ -21,4 +21,3 @@ Prof. Merrin’s Lab in University of Wisconsin-Madison &nbsp; &nbsp; &nbsp; &nb
 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;Taking in charge of designing algorithm for signal identification and analyzed research data with
 MATLAB.  
 
-[Resume](file:///Users/yiming/Desktop/resume/cv_yiming.html)
